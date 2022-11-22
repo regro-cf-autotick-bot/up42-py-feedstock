@@ -17,7 +17,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7,<3.10
+    - python >=3.7
   run:
     - branca
     - click
@@ -26,7 +26,7 @@ requirements:
     - geojson
     - geopandas
     - matplotlib-base
-    - python >=3.7,<3.10
+    - python >=3.7
     - rasterio
     - requests
     - requests-oauthlib
