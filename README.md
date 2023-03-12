@@ -1,11 +1,11 @@
-About up42-py
-=============
+About up42-py-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/up42-py-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/up42/up42-py
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/up42-py-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python SDK for UP42
 
