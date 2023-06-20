@@ -148,5 +148,5 @@ Feedstock Maintainers
 =====================
 
 * [@andher1802](https://github.com/andher1802/)
-* [@chrieke](https://github.com/chrieke/)
+* [@seedlit](https://github.com/seedlit)
 
