@@ -1,5 +1,5 @@
 {% set name = "up42-py" %}
-{% set version = "0.28.1" %}
+{% set version = "0.29.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/up42-py-{{ version }}.tar.gz
-  sha256: abbb940bbeb762550677a9e97446a7c9b405751908824aaf6a53e2d60a588242
+  sha256: c87ca92e7fb22202fc06cddaf372bc36e61bb4f0f5165d2a7205682b298dc939
 
 build:
   noarch: python
@@ -20,7 +20,6 @@ requirements:
     - python >=3.7
   run:
     - branca
-    - descartes
     - folium
     - geojson
     - geopandas
@@ -32,6 +31,10 @@ requirements:
     - tenacity
     - tqdm
     - pystac-client
+    - shapely
+    - oauthlib
+    - pandas
+    - numpy
 
 test:
   imports:
@@ -52,4 +55,4 @@ about:
 extra:
   recipe-maintainers:
     - andher1802
-    - chrieke
+    - seedlit
