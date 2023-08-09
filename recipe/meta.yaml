@@ -1,5 +1,5 @@
 {% set name = "up42-py" %}
-{% set version = "0.30.1" %}
+{% set version = "0.31.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/up42-py-{{ version }}.tar.gz
-  sha256: b36b7adaf456ca20185426e0b8f7488427fc2302f9d41b8f300f27a346deb7db
+  sha256: 2b482a98d237f47c997f3e5024fd29e6b87d3ccf13490ab6ae462ba78bcf4879
 
 build:
   noarch: python
@@ -17,7 +17,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
   run:
     - branca
     - folium
