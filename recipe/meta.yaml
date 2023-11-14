@@ -1,5 +1,5 @@
 {% set name = "up42-py" %}
-{% set version = "0.32.0" %}
+{% set version = "0.33.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,24 +7,26 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/up42-py-{{ version }}.tar.gz
-  sha256: f1a5001a63ab236aa90706fcc357b300d13ee856d81b1f31420e2742b5525917
+  sha256: 89ddea14fec9f2ca3f53c0ee576a79ba29b876a9ae5da66ab991a0d393d62efe
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps
   number: 0
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python >=3.8, <3.12
+    - poetry
+    - up42-py
   run:
     - branca
     - folium
     - geojson ==3.0.1
     - geopandas ==0.13.2
     - matplotlib-base
-    - python >=3.7
+    - python >=3.8, <3.12
     - rasterio
     - requests ==2.31.0
     - requests-oauthlib
@@ -35,6 +37,8 @@ requirements:
     - oauthlib
     - pandas
     - numpy
+    - pystac
+    - poetry
 
 test:
   imports:
