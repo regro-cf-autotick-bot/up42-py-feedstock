@@ -1,5 +1,5 @@
 {% set name = "up42-py" %}
-{% set version = "0.33.0" %}
+{% set version = "0.33.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/up42-py-{{ version }}.tar.gz
-  sha256: 89ddea14fec9f2ca3f53c0ee576a79ba29b876a9ae5da66ab991a0d393d62efe
+  sha256: 7fbe3e42513d53e3292d1e19e0f6c2387d0d589f68d191850e10f88ff0f11459
 
 build:
   noarch: python
@@ -15,11 +15,15 @@ build:
   number: 0
 
 requirements:
+  build:
+    - pip
+    - python >=3.8, <3.12
+    - setuptools
+    - wheel
   host:
     - pip
     - python >=3.8, <3.12
     - poetry
-    - up42-py
   run:
     - branca
     - folium
