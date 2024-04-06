@@ -1,5 +1,5 @@
 {% set name = "up42-py" %}
-{% set version = "0.37.0" %}
+{% set version = "0.37.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 1080f38b59934fe48d799d044af6a234b99163d5b988e2f56efb22d959f43e86
+  sha256: 4b42f2faddf53870d01b50407d6d39b9d13ee652d49caf8120f860a31595cd0d
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
     - wheel
   host:
     - pip
-    - python >=3.8, <3.12
+    - python >=3.9
     - poetry
   run:
     - branca
@@ -33,16 +33,13 @@ requirements:
     - python >=3.8, <3.12
     - rasterio
     - requests ==2.31.0
-    - requests-oauthlib
-    - tenacity ==8.2.2
     - tqdm ==4.66.0
     - pystac-client ==0.7.2
     - shapely
-    - oauthlib
     - pandas
     - numpy
     - pystac
-    - poetry
+    - urllib3
 
 test:
   imports:
