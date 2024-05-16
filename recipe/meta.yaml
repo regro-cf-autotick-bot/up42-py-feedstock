@@ -1,5 +1,5 @@
 {% set name = "up42-py" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 82ebaf6d59ff7b2fd218b986540579795f1e1674504700dbd69bd4d84a797f3d
+  sha256: 782a004661861d97f38b91a6b9d1d8cc599a4ce75e9e1c16893aea34e61cdafc
 
 build:
   noarch: python
@@ -60,4 +60,3 @@ about:
 extra:
   recipe-maintainers:
     - andher1802
-    - seedlit
