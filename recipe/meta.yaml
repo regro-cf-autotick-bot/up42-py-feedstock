@@ -1,5 +1,5 @@
 {% set name = "up42-py" %}
-{% set version = "1.0.2" %}
+{% set version = "1.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 782a004661861d97f38b91a6b9d1d8cc599a4ce75e9e1c16893aea34e61cdafc
+  sha256: 846b2b31f56d2e3d11133cd9335235a45dfd483947ea2bedcdaf632f93df5ce6
 
 build:
   noarch: python
@@ -34,6 +34,7 @@ requirements:
     - rasterio
     - requests ==2.31.0
     - tqdm ==4.66.0
+    - tenacity ==8.3.0
     - pystac-client ==0.7.2
     - shapely
     - pandas
