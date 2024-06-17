@@ -1,5 +1,5 @@
 {% set name = "up42-py" %}
-{% set version = "1.0.3" %}
+{% set version = "1.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 846b2b31f56d2e3d11133cd9335235a45dfd483947ea2bedcdaf632f93df5ce6
+  sha256: a2002723628048f4b18bd09a90f11650d33c66fde3020916814d9643c105983d
 
 build:
   noarch: python
@@ -27,18 +27,17 @@ requirements:
   run:
     - branca
     - folium
-    - geojson ==3.1.0
-    - geopandas ==0.13.2
     - matplotlib-base
+    - geojson ==3.1.0
+    - geopandas <1
     - python >=3.9, <4
     - rasterio
     - requests ==2.31.0
     - tqdm ==4.66.0
-    - tenacity ==8.3.0
-    - pystac-client ==0.7.2
+    - tenacity ==8.4.1
+    - pystac-client >=0.7.2, <0.8.0
     - shapely
     - pandas
-    - numpy
     - pystac
     - urllib3
 
