@@ -1,5 +1,5 @@
 {% set name = "up42-py" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 68a679493eb92239100c711777299e19a53eceb1cf7cf16a6ea1981ee3e4ad5d
+  sha256: 4289e2a70a38266941a0389f4bd235d9f5f7de178390df9524ea932d63792581
 
 build:
   noarch: python
