@@ -1,37 +1,45 @@
 {% set name = "up42-py" %}
-{% set version = "0.20.1" %}
+{% set version = "2.1.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/up42-py-{{ version }}.tar.gz
-  sha256: 4a94622cdbca24a0d2adc1a67a94f1f426f7b46d632540a36b680b50cf3a2b85
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 20f50fe6ec7a8fe88683a21ff51b5a858c7dadc7d3cff2144d447125459d5236
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps
+  number: 1
 
 requirements:
+  build:
+    - pip
+    - python >=3.9, <4
+    - setuptools
+    - wheel
   host:
     - pip
-    - python >=3.7,<3.10
+    - python {{ python_min }}
+    - poetry
   run:
     - branca
-    - click
-    - descartes
     - folium
-    - geojson
-    - geopandas
     - matplotlib-base
-    - python >=3.7,<3.10
+    - geojson ==3.1.0
+    - geopandas <1
+    - python >={{ python_min }},<4
     - rasterio
-    - requests
-    - requests-oauthlib
-    - tenacity
-    - tqdm
+    - requests ==2.31.0
+    - tqdm ==4.66.0
+    - tenacity ==8.4.1
+    - pystac-client >=0.7.2, <0.8.0
+    - shapely
+    - pandas
+    - pystac
+    - urllib3
 
 test:
   imports:
@@ -40,6 +48,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/up42/up42-py
@@ -52,4 +61,3 @@ about:
 extra:
   recipe-maintainers:
     - andher1802
-    - chrieke
