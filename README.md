@@ -20,7 +20,9 @@ Current build status
 <table><tr>
     <td>All platforms:</td>
     <td>
-      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
+      <a href="https://github.com/conda-forge/up42-py-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/up42-py-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
     </td>
   </tr>
 </table>
@@ -150,7 +152,6 @@ Feedstock Maintainers
 * [@abossart](https://github.com/abossart/)
 * [@andher1802](https://github.com/andher1802/)
 * [@janchrizz](https://github.com/janchrizz/)
-* [@JeremiahDo](https://github.com/JeremiahDo)
 * [@jmigueldelgado](https://github.com/jmigueldelgado/)
 * [@matheuspinheirosantos](https://github.com/matheuspinheirosantos/)
 * [@mohamed-aboshosha-up42](https://github.com/mohamed-aboshosha-up42/)
