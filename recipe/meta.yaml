@@ -1,13 +1,13 @@
 {% set name = "up42-py" %}
-{% set version = "4.0.0" %}
+{% set version = "4.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 455fc5f68c79d99affcd3c004618d78b3b1e5c7bdad39d9444e58b002ade37d4
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 99f4387033dfb647c329fb3bc7b6604ce6a050572a7e6e59b28cfb01ed6fd7aa
 
 build:
   noarch: python
