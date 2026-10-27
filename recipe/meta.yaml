@@ -1,5 +1,5 @@
 {% set name = "up42-py" %}
-{% set version = "4.2.0" %}
+{% set version = "4.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 5b7e84df1301bacc2ec5ed23bd267fe32e56c37bd6e6847b1177105e9c29c729
+  sha256: f24498649ea6ece3ffda1d9af713ed68411ad635f7269a1e877301efde067db7
 
 build:
   noarch: python
